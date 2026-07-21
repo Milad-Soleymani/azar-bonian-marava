@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Azar Bonian Marava",
+  title: "Azar Bonian Marava Co",
   description: "",
 };
 
