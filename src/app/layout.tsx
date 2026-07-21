@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Azar Bonian Marava Co",
   description: "",
    icons: {
-    icon: "/favicon.png",
+    icon: "/logo.png",
   },
 };
 
