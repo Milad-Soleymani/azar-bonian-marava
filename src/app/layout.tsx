@@ -6,6 +6,7 @@ import "./globals.css";
 
 //componnents
 import Header from '../components/Header'
+import PageTransition from '../components/PageTransition'
 
 
 const jetbrainsMono = JetBrains_Mono({
@@ -34,7 +35,10 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <Header />
+        <PageTransition>
         {children}
+
+        </PageTransition>
         <SpeedInsights />
       </body>
       <Analytics />
