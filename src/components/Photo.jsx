@@ -24,7 +24,7 @@ const Photo = () => {
           <Image
             src="/assets/logo.png"
             piority
-            quality={100}
+            quality={75}
             fill
             alt=""
             className="object-contain"
