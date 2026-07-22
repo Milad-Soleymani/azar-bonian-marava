@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+//componnents
+import Header from '../components/Header'
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-jetbrainsMono"
 });
 
 export const metadata: Metadata = {
   title: "Azar Bonian Marava Co",
   description: "",
-   icons: {
+  icons: {
     icon: "/logo.png",
   },
 };
@@ -30,12 +30,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Header />
         {children}
         <SpeedInsights />
-        </body>
+      </body>
       <Analytics />
     </html>
   );
