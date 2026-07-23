@@ -5,16 +5,26 @@ import { blogs } from "@/data/blogs";
 
 type BlogGridProps = {
   search: string;
+  category: string;
   currentPage: number;
   postsPerPage: number;
 };
 
 const BlogGrid = ({
   search,
+  category,
   currentPage,
   postsPerPage,
 }: BlogGridProps) => {
   const filteredBlogs = blogs.filter((blog) => {
+    const matchesSearch =
+      blog.title.toLowerCase().includes(search.toLowerCase()) ||
+      blog.description.toLowerCase().includes(search.toLowerCase());
+
+    const matchesCategory =
+      category === "All" || blog.category === category;
+
+    return matchesSearch && matchesCategory;
     const keyword = search.toLowerCase();
 
     return (

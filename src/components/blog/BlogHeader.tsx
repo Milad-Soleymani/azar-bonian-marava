@@ -5,6 +5,8 @@ import { IoSearch } from "react-icons/io5";
 type BlogHeaderProps = {
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
+  category: string;
+  setCategory: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const categories = [
@@ -15,7 +17,12 @@ const categories = [
   "Consulting",
 ];
 
-const BlogHeader = ({ search, setSearch }: BlogHeaderProps) => {
+const BlogHeader = ({
+  search,
+  setSearch,
+  category,
+  setCategory,
+}: BlogHeaderProps) => {
   return (
     <section className="pt-28 pb-12">
       <div className="container mx-auto">
@@ -44,32 +51,10 @@ const BlogHeader = ({ search, setSearch }: BlogHeaderProps) => {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search articles..."
-              className="
-                w-full
-                h-[56px]
-                rounded-full
-                bg-[#111111]
-                border
-                border-white/10
-                px-6
-                pr-14
-                text-white
-                outline-none
-                transition-all
-                focus:border-[#00ff99]
-              "
+              className="w-full h-[56px] rounded-full bg-[#111111] border border-white/10 px-6 pr-14 text-white outline-none transition-all focus:border-[#00ff99]"
             />
 
-            <IoSearch
-              className="
-                absolute
-                right-5
-                top-1/2
-                -translate-y-1/2
-                text-[#00ff99]
-                text-xl
-              "
-            />
+            <IoSearch className="absolute right-5 top-1/2 -translate-y-1/2 text-[#00ff99] text-xl" />
           </div>
         </div>
 
@@ -78,18 +63,12 @@ const BlogHeader = ({ search, setSearch }: BlogHeaderProps) => {
           {categories.map((item) => (
             <button
               key={item}
-              className="
-                h-12
-                px-6
-                rounded-full
-                bg-[#111111]
-                border
-                border-white/10
-                text-white
-                transition-all
-                hover:bg-[#00ff99]
-                hover:text-black
-              "
+              onClick={() => setCategory(item)}
+              className={`h-12 px-6 rounded-full transition-all ${
+                category === item
+                  ? "bg-[#00ff99] text-black"
+                  : "bg-[#111111] border border-white/10 text-white hover:bg-[#00ff99] hover:text-black"
+              }`}
             >
               {item}
             </button>

@@ -13,12 +13,20 @@ const BlogPage = () => {
 
   const postsPerPage = 4;
 
+  const [category, setCategory] = useState("All");
+
   return (
     <main className="min-h-screen bg-[#0A0A0A]">
-      <BlogHeader search={search} setSearch={setSearch} />
-
+      <BlogHeader
+        search={search}
+        setSearch={setSearch}
+        category={category}
+        setCategory={setCategory}
+      />
+      
       <BlogGrid
         search={search}
+        category={category}
         currentPage={currentPage}
         postsPerPage={postsPerPage}
       />
