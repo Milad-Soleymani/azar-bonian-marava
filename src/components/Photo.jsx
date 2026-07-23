@@ -24,7 +24,6 @@ const Photo = () => {
         >
           <Image
             src="/assets/logo.png"
-            piority
             quality={75}
             fill
             alt="Logo Of Company"
