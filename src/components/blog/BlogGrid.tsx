@@ -5,9 +5,15 @@ import { blogs } from "@/data/blogs";
 
 type BlogGridProps = {
   search: string;
+  currentPage: number;
+  postsPerPage: number;
 };
 
-const BlogGrid = ({ search }: BlogGridProps) => {
+const BlogGrid = ({
+  search,
+  currentPage,
+  postsPerPage,
+}: BlogGridProps) => {
   const filteredBlogs = blogs.filter((blog) => {
     const keyword = search.toLowerCase();
 
@@ -18,12 +24,17 @@ const BlogGrid = ({ search }: BlogGridProps) => {
     );
   });
 
+  const startIndex = (currentPage - 1) * postsPerPage;
+  const endIndex = startIndex + postsPerPage;
+
+  const currentBlogs = filteredBlogs.slice(startIndex, endIndex);
+
   return (
     <section className="pb-16">
       <div className="container mx-auto">
         {filteredBlogs.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
-            {filteredBlogs.map((blog) => (
+            {currentBlogs.map((blog) => (
               <BlogCard
                 key={blog.id}
                 id={blog.id}
