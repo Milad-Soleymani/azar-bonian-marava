@@ -48,6 +48,7 @@ const BlogGrid = ({
               <BlogCard
                 key={blog.id}
                 id={blog.id}
+                slug={blog.slug}
                 image={blog.image}
                 date={blog.date}
                 title={blog.title}
