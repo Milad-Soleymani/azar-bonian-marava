@@ -20,7 +20,7 @@ const Photo = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[298px] h-[298px] xl:w-[498px] mix-blend-lighten absolute top-16 left-5"
+          className="w-[268px] h-[268px] xl:w-[498px] mix-blend-lighten absolute xl:top-25 top-3 left-6  "
         >
           <Image
             src="/assets/logo.png"
