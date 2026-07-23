@@ -14,7 +14,7 @@ export default function Home() {
           <div className="text-center xl:text-left order-2 xl:order-0">
             <span className="text-xl ">Construction & Global Trade Company</span>
             <h1 className="h1 mb-6">
-              It's <br /><span className="text-accent">Azar Bonian Marava</span>
+              It&apos;s <br /><span className="text-accent">Azar Bonian Marava</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
              <b>Azar Bonian Marava</b> is a leading company in construction, project management, and international trade, delivering high-quality engineering solutions and export services with a commitment to innovation, precision, and sustainable growth.
