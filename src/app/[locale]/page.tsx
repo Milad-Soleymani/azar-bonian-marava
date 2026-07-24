@@ -129,8 +129,7 @@ export default async function Home({ params }: Props) {
       </div>
 
 
-      <Stats stats={stats} />
-
+      <Stats />
 
     </section>
   );

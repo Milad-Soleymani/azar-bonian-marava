@@ -13,12 +13,12 @@
   "home": {
     "subtitle": "Construction & Global Trade Company",
     "title": "It's",
-    "description": "is a leading company in construction, project management, and international trade, delivering high-quality engineering solutions and export services with a commitment to innovation, precision, and sustainable growth.",
+    "description": "A leading company in construction, project management, and international trade, delivering high-quality engineering solutions and export services with a commitment to innovation, precision, and sustainable growth.",
     "button": "Discover Our Story"
   },
   "stats": {
     "title": "Our Impact In Numbers",
-    "experience": "Years Experience",
+    "experience": "Years of Experience",
     "projects": "Projects Completed",
     "clients": "Satisfied Clients",
     "countries": "Countries Exported To"
@@ -38,15 +38,15 @@
       "title": "Our Story",
       "paragraph1": "Founded in 2016, Azar Bonyan Marava began with a vision to deliver world-class engineering solutions that drive progress and create lasting impact.",
       "paragraph2": "Through continuous innovation and the adoption of advanced technologies, we have delivered complex projects across diverse industries with excellence.",
-      "paragraph3": "We are committed to our clients, our people, and the communities we serve — building sustainable solutions for a smarter and better future.",
-      "paragraph4": "Our long-term vision is to be a global leader in engineering and technology, shaping a future built on innovation, integrity, and sustainability."
+      "paragraph3": "We are committed to our clients, our people, and the communities we serve by creating sustainable solutions for a better future.",
+      "paragraph4": "Our long-term vision is to become a globally trusted leader in engineering, construction, and international trade."
     },
     "mission": {
       "title": "Mission & Vision",
       "missionTitle": "Our Mission",
-      "missionText": "Deliver innovative engineering solutions that empower industries, enhance lives, and build a sustainable future.",
+      "missionText": "Deliver innovative engineering solutions that empower industries, improve lives, and build a sustainable future.",
       "visionTitle": "Our Vision",
-      "visionText": "To be a globally trusted leader in engineering and technology, driving innovation and creating lasting impact."
+      "visionText": "To become a globally trusted leader in engineering, construction, and international trade."
     },
     "values": {
       "title": "Core Values",
@@ -74,28 +74,49 @@
       "items": {
         "founded": {
           "title": "Company Founded",
-          "desc": "Azar Bonyan Marava was founded with a vision to deliver reliable construction projects and international trade services."
+          "desc": "Azar Bonyan Marava was established with the vision of delivering reliable construction projects and international trade services."
         },
         "firstProject": {
           "title": "First Major Project",
-          "desc": "Successfully completed our first major construction project, marking the beginning of our growth story."
+          "desc": "Successfully completed our first major construction project, marking the beginning of our growth journey."
         },
         "expansion": {
           "title": "International Trade Expansion",
-          "desc": "Expanded into international import and export operations, connecting clients across multiple countries."
+          "desc": "Expanded import and export operations while connecting clients across multiple international markets."
         },
         "solutions": {
           "title": "Diversified Construction & Trade Solutions",
-          "desc": "Introduced advanced construction methods and expanded our trade network across new global markets."
+          "desc": "Introduced advanced construction techniques and expanded our international trade network."
         },
         "future": {
           "title": "Global Vision",
-          "desc": "Continuing our journey toward global leadership in construction and international trade."
+          "desc": "Continuing our journey toward becoming a global leader in construction and international trade."
         }
       }
     },
+    "stats": {
+      "title": "Our Impact In Numbers",
+      "experience": "Years of Experience",
+      "projects": "Projects Completed",
+      "clients": "Satisfied Clients",
+      "countries": "Countries Exported To"
+    },
     "leadership": {
-      "title": "Our Leadership"
+      "title": "Our Leadership",
+      "items": {
+        "ceo": {
+          "role": "Chief Executive Officer",
+          "desc": "Leads the company's strategic vision, business growth, and international development."
+        },
+        "constructionDirector": {
+          "role": "Construction Director",
+          "desc": "Oversees construction projects with a strong focus on quality, safety, and operational excellence."
+        },
+        "tradeManager": {
+          "role": "International Trade Manager",
+          "desc": "Manages global import and export operations while strengthening international business partnerships."
+        }
+      }
     },
     "partners": {
       "title": "Partners & Certifications",
@@ -104,7 +125,7 @@
     },
     "cta": {
       "title": "Let's Build the Future Together",
-      "description": "Ready to start your next engineering project?",
+      "description": "Ready to start your next engineering or construction project?",
       "button": "Contact Us"
     }
   }
