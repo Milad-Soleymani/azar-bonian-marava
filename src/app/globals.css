@@ -150,7 +150,10 @@
   }
 
   body {
-    @apply bg-background text-foreground font-primary leading-loose;
+    background: #0a0a0a;
+    color: white;
+    font-family: var(--font-jetbrainsMono);
+    line-height: 2;
   }
 
   html {
@@ -168,8 +171,6 @@
   .h3 {
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
-
-
 }
 
 @utility text-outline {
