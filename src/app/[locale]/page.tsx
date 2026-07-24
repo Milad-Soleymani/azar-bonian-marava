@@ -17,8 +17,30 @@ export default async function Home({ params }: Props) {
   const { locale } = await params;
 
   const t = await getTranslations("home");
+  const tStats = await getTranslations("stats");
 
   const isRTL = locale === "fa" || locale === "ar";
+
+
+  const stats = [
+    {
+      num: 1,
+      text: tStats("experience"),
+    },
+    {
+      num: 180,
+      text: tStats("projects"),
+    },
+    {
+      num: 10,
+      text: tStats("transformation"),
+    },
+    {
+      num: 100,
+      text: tStats("clients"),
+    },
+  ];
+
 
   return (
     <section
@@ -38,9 +60,10 @@ export default async function Home({ params }: Props) {
             `}
           >
 
-            <span className="text-xl pb-8">
+            <span className="text-xl">
               {t("subtitle")}
             </span>
+
 
             <h1 className="h1 mb-6">
               {t("title")}
@@ -51,11 +74,15 @@ export default async function Home({ params }: Props) {
               </span>
             </h1>
 
+
             <p className="max-w-[500px] mb-9 text-white/80">
+
               <b>
                 Azar Bonyan Marava
               </b>{" "}
+
               {t("description")}
+
             </p>
 
 
@@ -66,20 +93,25 @@ export default async function Home({ params }: Props) {
                 size="lg"
                 className="uppercase flex items-center gap-2"
               >
+
                 <BsInfoSquareFill />
 
                 <span>
                   {t("button")}
                 </span>
+
               </Button>
 
 
               <div className="mb-8 xl:mb-0">
+
                 <Social
                   containerStyles="flex gap-6"
                   iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
                 />
+
               </div>
+
 
             </div>
 
@@ -96,7 +128,9 @@ export default async function Home({ params }: Props) {
 
       </div>
 
-      <Stats />
+
+      <Stats stats={stats} />
+
 
     </section>
   );

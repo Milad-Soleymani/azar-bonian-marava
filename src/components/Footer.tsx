@@ -49,7 +49,7 @@ const Footer = () => {
             <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-3">
                 <div>
                     <div className="mb-4 flex items-center gap-2">
-                        <Image src='/assets/logo.png' width={50} height={50} />
+                        <Image src='/assets/logo.png' width={50} height={50} alt="Azar Bonian Marava"/>
                         <span className="leading-tight">
                             <span className="block text-sm font-bold tracking-wide text-accent">AZAR</span>
                             <span className="block text-[9px] tracking-widest text-white/50">
