@@ -1,4 +1,6 @@
+"use client"
 import { blogs } from "@/data/blogs";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -25,9 +27,18 @@ export default async function BlogDetails({ params }: Props) {
         item.category === blog.category && item.slug !== blog.slug
     )
     .slice(0, 3);
-
   return (
-    <main className="pt-32 pb-20 bg-[#0A0A0A] min-h-screen">
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: {
+          delay: 2.4,
+          duration: 0.4,
+          ease: "easeIn",
+        },
+      }}
+      className="pt-32 pb-20 bg-[#0A0A0A] min-h-screen">
       <div className="container mx-auto">
 
         {/* Back */}
@@ -109,6 +120,6 @@ export default async function BlogDetails({ params }: Props) {
 
         </div>
       </div>
-    </main>
+    </motion.main>
   );
 }

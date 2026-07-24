@@ -5,6 +5,7 @@ import { useState } from "react";
 import BlogGrid from "@/components/blog/BlogGrid";
 import BlogHeader from "@/components/blog/BlogHeader";
 import Pagination from "@/components/blog/Pagination";
+import { motion } from "framer-motion";
 
 const BlogPage = () => {
   const [search, setSearch] = useState("");
@@ -14,16 +15,25 @@ const BlogPage = () => {
   const postsPerPage = 4;
 
   const [category, setCategory] = useState("All");
-
   return (
-    <main className="min-h-screen bg-[#0A0A0A]">
+    <motion.main
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: {
+          delay: 2.4,
+          duration: 0.4,
+          ease: "easeIn",
+        },
+      }}
+      className="min-h-screen bg-[#0A0A0A]">
       <BlogHeader
         search={search}
         setSearch={setSearch}
         category={category}
         setCategory={setCategory}
       />
-      
+
       <BlogGrid
         search={search}
         category={category}
@@ -37,7 +47,7 @@ const BlogPage = () => {
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
       />
-    </main>
+    </motion.main>
   );
 };
 
