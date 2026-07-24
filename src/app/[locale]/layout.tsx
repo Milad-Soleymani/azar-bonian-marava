@@ -22,6 +22,7 @@ import StairTransition from "@/components/StairTransition";
 
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import JsonLd from "@/components/seo/JsonLd";
 
 
 type Props = {
@@ -224,32 +225,6 @@ export default async function LocaleLayout({
 
 
 
-  const jsonLd = {
-
-    "@context":
-      "https://schema.org",
-
-
-    "@type":
-      "Organization",
-
-
-    name:
-      "Azar Bonyan Marava",
-
-
-    description:
-      "Construction, Engineering and International Trade Company.",
-
-
-    url:
-      "https://azar-bonian-marava.vercel.app",
-
-
-    logo:
-      "https://azar-bonian-marava.vercel.app/logo.png",
-
-  };
 
 
 
@@ -258,13 +233,7 @@ export default async function LocaleLayout({
     <NextIntlClientProvider messages={messages}>
 
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html:
-            JSON.stringify(jsonLd),
-        }}
-      />
+      <JsonLd />
 
 
       <Header />
