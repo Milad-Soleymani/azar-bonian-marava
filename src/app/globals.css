@@ -89,7 +89,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-    /* Colors */
+  /* Colors */
   --background: #0a0a0a;
   --surface: #111111;
   --card: rgba(255, 255, 255, 0.03);
@@ -150,7 +150,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-primary bg-primary text-white leading-loose;
+    @apply bg-background text-foreground font-primary leading-loose;
   }
 
   html {
@@ -171,10 +171,11 @@
 
 
 }
-  @utility text-outline {
-    -webkit-text-stroke: 1px #fff;
-  }
 
-  @utility text-outline-hover {
-    -webkit-text-stroke: 1px #00ff99;
-  }
+@utility text-outline {
+  -webkit-text-stroke: 1px #fff;
+}
+
+@utility text-outline-hover {
+  -webkit-text-stroke: 1px #00ff99;
+}
