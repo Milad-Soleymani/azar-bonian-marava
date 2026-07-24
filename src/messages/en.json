@@ -20,63 +20,70 @@
     "experience": "Years of Experience",
     "projects": "Projects Completed",
     "transformation": "Money Transformation",
-    "clients": "Client Testimonials"
-  },
-  
-    "breadcrumb": {
-      "home": "Home",
-      "about": "About Us"
-    },
-    "about": {
-  "hero": {
-    "eyebrow": "Who We Are",
-    "title": "About Azar Bonyan Marava",
-    "description": "Building lasting infrastructure and connecting global markets through reliable construction projects and international trade.",
-    "scroll": "Scroll Down"
-  },
-
-  "story": {
-    "title": "Our Story",
-    "paragraph1": "Founded in 2016, Azar Bonyan Marava began with a vision to deliver world-class engineering solutions that drive progress and create lasting impact.",
-    "paragraph2": "Through continuous innovation and the adoption of advanced technologies, we have delivered complex projects across diverse industries with excellence.",
-    "paragraph3": "We are committed to our clients, our people, and the communities we serve — building sustainable solutions for a smarter and better future.",
-    "paragraph4": "Our long-term vision is to be a global leader in engineering and technology, shaping a future built on innovation, integrity, and sustainability."
-  },
-
-  "mission": {
-    "title": "Mission & Vision",
-    "missionTitle": "Our Mission",
-    "missionText": "Deliver innovative engineering solutions that empower industries, enhance lives, and build a sustainable future.",
-    "visionTitle": "Our Vision",
-    "visionText": "To be a globally trusted leader in engineering and technology, driving innovation and creating lasting impact."
-  },
-
-  "values": {
-    "title": "Core Values"
-  },
-
-  "journey": {
-    "title": "Our Journey"
-  },
-
-  "leadership": {
-    "title": "Our Leadership"
-  },
-
-  "partners": {
-    "title": "Partners & Certifications",
-    "partners": "Our Partners",
-    "certifications": "Certifications"
-  },
-
-  "stats": {
+    "clients": "Client Testimonials",
     "title": "Our Impact In Numbers"
   },
-
-  "cta": {
-    "title": "Let's Build the Future Together",
-    "description": "Ready to start your next engineering project?",
-    "button": "Contact Us"
+  "breadcrumb": {
+    "home": "Home",
+    "about": "About Us"
+  },
+  "about": {
+    "hero": {
+      "eyebrow": "Who We Are",
+      "title": "About Azar Bonyan Marava",
+      "description": "Building lasting infrastructure and connecting global markets through reliable construction projects and international trade.",
+      "scroll": "Scroll Down"
+    },
+    "story": {
+      "title": "Our Story",
+      "paragraph1": "Founded in 2016, Azar Bonyan Marava began with a vision to deliver world-class engineering solutions that drive progress and create lasting impact.",
+      "paragraph2": "Through continuous innovation and the adoption of advanced technologies, we have delivered complex projects across diverse industries with excellence.",
+      "paragraph3": "We are committed to our clients, our people, and the communities we serve — building sustainable solutions for a smarter and better future.",
+      "paragraph4": "Our long-term vision is to be a global leader in engineering and technology, shaping a future built on innovation, integrity, and sustainability."
+    },
+    "mission": {
+      "title": "Mission & Vision",
+      "missionTitle": "Our Mission",
+      "missionText": "Deliver innovative engineering solutions that empower industries, enhance lives, and build a sustainable future.",
+      "visionTitle": "Our Vision",
+      "visionText": "To be a globally trusted leader in engineering and technology, driving innovation and creating lasting impact."
+    },
+    "values": {
+      "title": "Core Values",
+      "items": {
+        "innovation": {
+          "title": "Innovation",
+          "desc": "We embrace modern construction methods and efficient trade solutions to meet evolving market demands."
+        },
+        "integrity": {
+          "title": "Integrity",
+          "desc": "We conduct every project and transaction with honesty, transparency, and strong ethical principles."
+        },
+        "quality": {
+          "title": "Quality",
+          "desc": "We are committed to the highest standards in construction execution and international trade operations."
+        },
+        "sustainability": {
+          "title": "Sustainability",
+          "desc": "We build responsibly and trade sustainably, respecting the environment and future generations."
+        }
+      }
+    },
+    "journey": {
+      "title": "Our Journey"
+    },
+    "leadership": {
+      "title": "Our Leadership"
+    },
+    "partners": {
+      "title": "Partners & Certifications",
+      "partners": "Our Partners",
+      "certifications": "Certifications"
+    },
+    "cta": {
+      "title": "Let's Build the Future Together",
+      "description": "Ready to start your next engineering project?",
+      "button": "Contact Us"
+    }
   }
-}
 }
