@@ -30,24 +30,24 @@ export const CORE_VALUES = [
 
 export const JOURNEY = [
   {
-    year: "2024",
     key: "founded",
+    year: "2016",
   },
   {
-    year: "2024",
     key: "firstProject",
+    year: "2018",
   },
   {
-    year: "2026",
-    key: "tradeExpansion",
+    key: "expansion",
+    year: "2021",
   },
   {
+    key: "solutions",
     year: "2024",
-    key: "diversified",
   },
   {
+    key: "future",
     year: "Future",
-    key: "globalVision",
   },
 ];
 
