@@ -88,21 +88,17 @@ export const STATS = [
   },
 ];
 
-
 export const LEADERSHIP = [
   {
-    name: "Arman Dehghan",
-    role: "ceo",
+    name: "Hadi Soleymani",
     key: "ceo",
   },
   {
     name: "Reza Kalantari",
-    role: "constructionDirector",
     key: "constructionDirector",
   },
   {
     name: "Meysam Farhadi",
-    role: "tradeManager",
     key: "tradeManager",
   },
 ];
