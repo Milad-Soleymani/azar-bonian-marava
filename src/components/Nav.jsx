@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 const links = [
   {
@@ -17,7 +17,7 @@ const links = [
     path: "/blog",
   },
   {
-    name: "about-us",
+    name: "about",
     path: "/about-us",
   },
   {
@@ -26,19 +26,39 @@ const links = [
   },
 ];
 
+
 const Nav = () => {
-    const pathname= usePathname();
-    console.log(pathname)
+
+  const pathname = usePathname();
+  const t = useTranslations("navigation");
+
+
   return (
     <nav className="flex gap-8">
-      {links.map((link, index) => {
-        return <Link href={link.path} key={index} className={`${link.path == pathname && "text-accent border-b-2 border-accent"} capitalize font-medium hover:text-accent transition-all`}>
-            {link.name}
-          </Link>
-        
-      })}
+
+      {links.map((link) => (
+
+        <Link
+          href={link.path}
+          key={link.path}
+          className={`
+            ${
+              pathname === link.path
+                ? "text-accent border-b-2 border-accent"
+                : ""
+            }
+            capitalize font-medium hover:text-accent transition-all
+          `}
+        >
+          {t(link.name)}
+
+        </Link>
+
+      ))}
+
     </nav>
   );
 };
+
 
 export default Nav;

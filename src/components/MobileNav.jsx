@@ -1,9 +1,11 @@
 "use client";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { usePathname } from "next/navigation";
 import { CiMenuFries } from "react-icons/ci";
-import Link from "next/link";
+
+import { Link, usePathname } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
+
 
 const links = [
   {
@@ -19,7 +21,7 @@ const links = [
     path: "/blog",
   },
   {
-    name: "about-us",
+    name: "about",
     path: "/about-us",
   },
   {
@@ -27,36 +29,77 @@ const links = [
     path: "/contact",
   },
 ];
+
+
 const MobileNav = () => {
+
   const pathname = usePathname();
+  const t = useTranslations("navigation");
+
+
   return (
+
     <Sheet>
+
       <SheetTrigger className="flex justify-center items-center">
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
-      <SheetContent className="flex flex-col ">
-        {/* logo */}
+
+
+      <SheetContent className="flex flex-col">
+
+
+        {/* Logo */}
         <div className="mt-32 mb-40 text-center text-2xl">
+
           <Link href="/">
+
             <h1 className="text-4xl font-semibold">
               Azar Bonian
-              <span className="text-accent">Co.</span>
+              <span className="text-accent">
+                Co.
+              </span>
             </h1>
+
           </Link>
+
         </div>
-        {/* nav */}
+
+
+        {/* Navigation */}
         <nav className="flex flex-col justify-center items-center gap-8">
-          {links.map((link, index) => {
-            return (
-              <Link href={link.path} key={index} className={`${link.path == pathname ? "text-accent border-b-2 border-accent" : " text-white" } text-xl cursor-pointer capitalize hover:text-accent transition-all`}>
-                {link.name}
-              </Link>
-            );
-          })}
+
+          {links.map((link) => (
+
+            <Link
+              href={link.path}
+              key={link.path}
+              className={`
+                ${
+                  pathname === link.path
+                    ? "text-accent border-b-2 border-accent"
+                    : "text-white"
+                }
+                text-xl cursor-pointer capitalize
+                hover:text-accent transition-all
+              `}
+            >
+
+              {t(link.name)}
+
+            </Link>
+
+          ))}
+
         </nav>
+
+
       </SheetContent>
+
     </Sheet>
+
   );
 };
+
 
 export default MobileNav;
