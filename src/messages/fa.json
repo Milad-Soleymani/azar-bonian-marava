@@ -24,5 +24,11 @@
   "projects": "پروژه تکمیل شده",
   "transformation": "تحول مالی",
   "clients": "رضایت مشتریان"
-}
+},
+
+  "breadcrumb": {
+    "home": "خانه",
+    "about": "درباره ما"
+  }
+
 }

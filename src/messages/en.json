@@ -3,7 +3,6 @@
     "company": "Azar Bonyan Marava",
     "contact": "Contact Us"
   },
-
   "navigation": {
     "home": "Home",
     "services": "Services",
@@ -11,20 +10,21 @@
     "about": "About Us",
     "contact": "Contact"
   },
-
-  
   "home": {
     "subtitle": "Construction & Global Trade Company",
     "title": "It's",
     "description": "is a leading company in construction, project management, and international trade, delivering high-quality engineering solutions and export services with a commitment to innovation, precision, and sustainable growth.",
     "button": "Discover Our Story"
   },
-  
   "stats": {
-  "experience": "Years of Experience",
-  "projects": "Projects Completed",
-  "transformation": "Money Transformation",
-  "clients": "Client Testimonials"
-}
-
+    "experience": "Years of Experience",
+    "projects": "Projects Completed",
+    "transformation": "Money Transformation",
+    "clients": "Client Testimonials"
+  },
+  
+    "breadcrumb": {
+      "home": "Home",
+      "about": "About Us"
+    }
 }
