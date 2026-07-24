@@ -1,25 +1,33 @@
+"use client";
+
 import { ChevronDown } from "lucide-react";
+import { useTranslations } from "next-intl";
+
 import Eyebrow from "@/components/ui/Eyebrow";
 
 const GREEN = "#39FFA0";
 
 export default function Hero() {
+  const t = useTranslations("about.hero");
+
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-24 lg:grid-cols-2">
+
+        {/* Content */}
         <div>
-          <Eyebrow>Who We Are</Eyebrow>
+          <Eyebrow>
+            {t("eyebrow")}
+          </Eyebrow>
 
           <h1 className="text-4xl font-extrabold uppercase leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-            About Azar
-            <br />
-            Bonyan Marava
+            {t("title")}
           </h1>
 
           <p className="mt-6 max-w-md text-white/60">
-            Building lasting infrastructure and connecting global markets
-            through reliable construction projects and international trade.
+            {t("description")}
           </p>
+
 
           <a
             href="#our-story"
@@ -27,24 +35,33 @@ export default function Hero() {
           >
             <span
               className="flex h-9 w-9 items-center justify-center rounded-full border"
-              style={{ borderColor: `${GREEN}60` }}
+              style={{
+                borderColor: `${GREEN}60`,
+              }}
             >
               <ChevronDown
                 className="h-4 w-4"
-                style={{ color: GREEN }}
+                style={{
+                  color: GREEN,
+                }}
               />
             </span>
 
-            Scroll Down
+            {t("scroll")}
           </a>
         </div>
 
-        {/* Abstract Graphic */}
+
+        {/* Graphic */}
         <div className="relative flex h-72 items-center justify-center sm:h-96">
+
           <div
             className="absolute h-40 w-72 rounded-full blur-3xl"
-            style={{ backgroundColor: `${GREEN}25` }}
+            style={{
+              backgroundColor: `${GREEN}25`,
+            }}
           />
+
 
           <svg
             viewBox="0 0 400 300"
@@ -56,12 +73,14 @@ export default function Hero() {
               strokeWidth="1.2"
               opacity="0.9"
             >
+
               <polygon points="200,30 300,90 300,180 200,240 100,180 100,90" />
 
               <polygon
                 points="200,30 260,60 260,150 200,180 140,150 140,60"
                 opacity="0.6"
               />
+
 
               <line
                 x1="200"
@@ -87,6 +106,7 @@ export default function Hero() {
                 opacity="0.4"
               />
 
+
               <rect
                 x="160"
                 y="110"
@@ -95,7 +115,9 @@ export default function Hero() {
                 transform="rotate(20 200 150)"
                 opacity="0.5"
               />
+
             </g>
+
 
             <ellipse
               cx="200"
@@ -105,8 +127,11 @@ export default function Hero() {
               fill={GREEN}
               opacity="0.15"
             />
+
           </svg>
+
         </div>
+
       </div>
     </section>
   );
