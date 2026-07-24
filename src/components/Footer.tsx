@@ -1,3 +1,4 @@
+"use client"
 import {
     Target,
     Eye,
@@ -14,24 +15,43 @@ import {
     Menu,
 } from "lucide-react";
 import { IconLinkedin, IconX, IconInstagram, IconYoutube } from "@/components/SocialIcons";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-const QUICK_LINKS = ["About Us", "Our Services", "Projects", "Careers", "Contact Us"];
-const GREEN = "#39FFA0";
+const links = [
+  {
+    name: "home",
+    path: "/",
+  },
+  {
+    name: "services",
+    path: "/services",
+  },
+  {
+    name: "blog",
+    path: "/blog",
+  },
+  {
+    name: "about-us",
+    path: "/about-us",
+  },
+  {
+    name: "contact",
+    path: "/contact",
+  },
+];const GREEN = "#00ff99";
 
 const Footer = () => {
+    const pathname = usePathname()
     return (
         <footer className="border-t border-white/10">
             <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-3">
                 <div>
                     <div className="mb-4 flex items-center gap-2">
-                        <span
-                            className="flex h-8 w-8 items-center justify-center rounded-md font-bold text-black"
-                            style={{ backgroundColor: GREEN }}
-                        >
-                            A
-                        </span>
+                        <Image src='/assets/logo.png' width={50} height={50} />
                         <span className="leading-tight">
-                            <span className="block text-sm font-bold tracking-wide">AZAR</span>
+                            <span className="block text-sm font-bold tracking-wide text-accent">AZAR</span>
                             <span className="block text-[9px] tracking-widest text-white/50">
                                 BONYAN MARAVA
                             </span>
@@ -48,11 +68,11 @@ const Footer = () => {
                         Quick Links
                     </p>
                     <ul className="space-y-2">
-                        {QUICK_LINKS.map((link) => (
-                            <li key={link}>
-                                <a href="#" className="text-sm text-white/60 hover:text-white">
-                                    {link}
-                                </a>
+                        {links.map((link, index) => (
+                            <li key={index}>
+                                <Link href={link.path} className={`${link.path == pathname ? "text-accent border-b-2 border-accent" : " text-white" } text-semibold cursor-pointer capitalize hover:text-accent transition-all`}>
+                                    {link.name}
+                                </Link>
                             </li>
                         ))}
                     </ul>
