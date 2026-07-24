@@ -18,13 +18,16 @@ import CTA from "@/components/about/CTA";
 
 
 export default function AboutPage() {
-
   const { locale } = useParams();
   const t = useTranslations("breadcrumb");
 
+  const isRTL = locale === "fa" || locale === "ar";
 
   return (
-    <main className="min-h-screen bg-[#07080a] text-white">
+    <main
+      dir={isRTL ? "rtl" : "ltr"}
+      className="min-h-screen bg-[#07080a] text-white"
+    >
 
       <Breadcrumb
         items={[

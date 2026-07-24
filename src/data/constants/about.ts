@@ -27,7 +27,6 @@ export const CORE_VALUES = [
   },
 ];
 
-
 export const JOURNEY = [
   {
     key: "founded",
@@ -51,7 +50,6 @@ export const JOURNEY = [
   },
 ];
 
-
 export const WHY_CHOOSE_US = [
   {
     key: "experiencedTeam",
@@ -67,27 +65,26 @@ export const WHY_CHOOSE_US = [
   },
 ];
 
-
 export const STATS = [
   {
+    key: "experience",
     icon: Award,
     value: "10+",
-    key: "experience",
   },
   {
+    key: "projects",
     icon: Briefcase,
     value: "250+",
-    key: "projects",
   },
   {
+    key: "clients",
     icon: Users,
     value: "120+",
-    key: "clients",
   },
   {
+    key: "countries",
     icon: User,
     value: "30+",
-    key: "countries",
   },
 ];
 
@@ -110,7 +107,6 @@ export const LEADERSHIP = [
   },
 ];
 
-
 export const PARTNERS = [
   "SIEMENS",
   "AUTODESK",
@@ -118,7 +114,6 @@ export const PARTNERS = [
   "AGGREGATE INDUSTRIES",
   "IBM",
 ];
-
 
 export const CERTIFICATIONS = [
   "ISO 9001:2015",

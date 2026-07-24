@@ -17,11 +17,11 @@
     "button": "Discover Our Story"
   },
   "stats": {
-    "experience": "Years of Experience",
+    "title": "Our Impact In Numbers",
+    "experience": "Years Experience",
     "projects": "Projects Completed",
-    "transformation": "Money Transformation",
-    "clients": "Client Testimonials",
-    "title": "Our Impact In Numbers"
+    "clients": "Satisfied Clients",
+    "countries": "Countries Exported To"
   },
   "breadcrumb": {
     "home": "Home",
@@ -70,7 +70,29 @@
       }
     },
     "journey": {
-      "title": "Our Journey"
+      "title": "Our Journey",
+      "items": {
+        "founded": {
+          "title": "Company Founded",
+          "desc": "Azar Bonyan Marava was founded with a vision to deliver reliable construction projects and international trade services."
+        },
+        "firstProject": {
+          "title": "First Major Project",
+          "desc": "Successfully completed our first major construction project, marking the beginning of our growth story."
+        },
+        "expansion": {
+          "title": "International Trade Expansion",
+          "desc": "Expanded into international import and export operations, connecting clients across multiple countries."
+        },
+        "solutions": {
+          "title": "Diversified Construction & Trade Solutions",
+          "desc": "Introduced advanced construction methods and expanded our trade network across new global markets."
+        },
+        "future": {
+          "title": "Global Vision",
+          "desc": "Continuing our journey toward global leadership in construction and international trade."
+        }
+      }
     },
     "leadership": {
       "title": "Our Leadership"
