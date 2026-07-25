@@ -129,5 +129,12 @@
       "description": "Ready to start your next engineering or construction project?",
       "button": "Contact Us"
     }
+  },
+  "footer": {
+    "title": "Footer",
+    "description": "A leading company in construction, project management, and international trade, delivering innovative engineering solutions with a commitment to quality, sustainability, and long-term growth.",
+    "quickLinks": "Quick Links",
+    "follow": "Follow Us",
+    "copyright": "© 2024–2026 Azar Bonyan Marava. All Rights Reserved."
   }
 }
