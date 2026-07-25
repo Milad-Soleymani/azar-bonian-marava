@@ -236,8 +236,12 @@ const Contact = () => {
 
                 <Select
                   value={service}
-                  onValueChange={(value) => setValue("service", value)}
-                >
+                  onValueChange={(value) => {
+                    setValue("service", value ?? "", {
+                      shouldValidate: true,
+                      shouldDirty: true,
+                    });
+                  }}                >
                   <SelectTrigger className="w-full">
                     <SelectValue placeholder={t("form.service")} />
                   </SelectTrigger>
