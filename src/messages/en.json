@@ -163,38 +163,45 @@
     "copyright": "© 2024–2026 Azar Bonyan Marava. All Rights Reserved."
   },
   "contact": {
-  "title": "Let's Work Together",
-  "description": "Contact us to start your next project. Our team is ready to answer your requests.",
-
-  "form": {
-    "firstname": "Firstname",
-    "lastname": "Lastname",
-    "email": "Email address",
-    "phone": "Phone number",
-    "service": "Select a service",
-    "message": "Type your message here",
-    "submit": "Send message"
-  },
-
-  "services": {
-    "construction": "Construction",
-    "import": "Import",
-    "export": "Export"
-  },
-
-  "info": {
-    "phone": {
-      "title": "Phone",
-      "description": "(+98) 912 345 6789"
+    "title": "Let's Work Together",
+    "description": "Contact us to start your next project. Our team is ready to answer your requests.",
+    "form": {
+      "firstname": "Firstname",
+      "lastname": "Lastname",
+      "email": "Email address",
+      "phone": "Phone number",
+      "service": "Select a service",
+      "message": "Type your message here",
+      "submit": "Send message"
     },
-    "email": {
-      "title": "Email",
-      "description": "example@gmail.com"
+    "services": {
+      "construction": "Construction",
+      "import": "Import",
+      "export": "Export"
     },
-    "address": {
-      "title": "Address",
-      "description": "Iran, Behbahani St."
-    }
+    "info": {
+      "phone": {
+        "title": "Phone",
+        "description": "(+98) 912 345 6789"
+      },
+      "email": {
+        "title": "Email",
+        "description": "example@gmail.com"
+      },
+      "address": {
+        "title": "Address",
+        "description": "Iran, Behbahani St."
+      }
+    },
+    
+      "validation": {
+        "firstname": "Firstname is required",
+        "lastname": "Lastname is required",
+        "email": "Enter a valid email address",
+        "phone": "Enter a valid phone number",
+        "service": "Please select a service",
+        "message": "Message cannot be empty"
+      }
+    
   }
-}
 }

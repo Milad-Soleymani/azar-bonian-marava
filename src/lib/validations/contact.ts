@@ -1,30 +1,45 @@
 import { z } from "zod";
 
-export const contactSchema = z.object({
-  firstname: z
-    .string()
-    .min(2, "First name must be at least 2 characters"),
+export const contactSchema = (t: (key: string) => string) =>
+  z.object({
+    firstname: z
+      .string()
+      .min(2, {
+        message: t("validation.firstname"),
+      }),
 
-  lastname: z
-    .string()
-    .min(2, "Last name must be at least 2 characters"),
+    lastname: z
+      .string()
+      .min(2, {
+        message: t("validation.lastname"),
+      }),
 
-  email: z
-    .string()
-    .email("Invalid email address"),
+    email: z
+      .string()
+      .email({
+        message: t("validation.email"),
+      }),
 
-  phone: z
-    .string()
-    .min(8, "Invalid phone number"),
+    phone: z
+      .string()
+      .min(8, {
+        message: t("validation.phone"),
+      }),
 
-  service: z
-    .string()
-    .min(1, "Please select a service"),
+    service: z
+  .string({
+    error: t("validation.service"),
+  })
+  .min(1, t("validation.service")),
 
-  message: z
-    .string()
-    .min(10, "Message must be at least 10 characters"),
-});
+    message: z
+      .string()
+      .min(10, {
+        message: t("validation.message"),
+      }),
+  });
 
 
-export type ContactFormData = z.infer<typeof contactSchema>;
+export type ContactFormData = z.infer<
+  ReturnType<typeof contactSchema>
+>;

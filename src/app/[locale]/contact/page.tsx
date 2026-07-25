@@ -4,8 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-
 import {
   Select,
   SelectContent,
@@ -16,22 +14,29 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+} from "react-icons/fa";
+
 import { motion } from "framer-motion";
+
 import { useTranslations } from "next-intl";
 
 import { useForm } from "react-hook-form";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import {
   contactSchema,
-  ContactFormData,
+  type ContactFormData,
 } from "@/lib/validations/contact";
 
-
 const Contact = () => {
-
   const t = useTranslations("contact");
 
+  const schema = contactSchema(t);
 
   const {
     register,
@@ -39,14 +44,13 @@ const Contact = () => {
     setValue,
     formState: { errors },
   } = useForm<ContactFormData>({
-    resolver: zodResolver(contactSchema),
+    resolver: zodResolver(schema),
   });
 
 
   const onSubmit = (data: ContactFormData) => {
     console.log(data);
   };
-
 
   const info = [
     {
@@ -183,7 +187,10 @@ const Contact = () => {
 
                 <Select
                   onValueChange={(value) =>
-                    setValue("service", value)
+                    setValue("service", value, {
+                      shouldValidate: true,
+                      shouldDirty: true,
+                    })
                   }
                 >
 
