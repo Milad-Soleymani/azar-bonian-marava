@@ -6,6 +6,7 @@ import { getTranslations } from "next-intl/server";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
+import WhyChoose from "@/components/home/WhyChoose";
 
 type Props = {
   params: Promise<{
@@ -130,7 +131,7 @@ export default async function Home({ params }: Props) {
 
 
       <Stats />
-
+      <WhyChoose />
     </section>
   );
 }

@@ -14,8 +14,34 @@
     "subtitle": "Construction & Global Trade Company",
     "title": "It's",
     "description": "A leading company in construction, project management, and international trade, delivering high-quality engineering solutions and export services with a commitment to innovation, precision, and sustainable growth.",
-    "button": "Discover Our Story"
+    "button": "Discover Our Story",
+    "whyChoose": {
+      "eyebrow": "Why Choose Us",
+      "title": "Why Businesses Trust Us",
+      "description": "We combine engineering expertise, international trade experience, and an unwavering commitment to quality to deliver reliable solutions for every project.",
+      "innovation": {
+        "title": "Innovation",
+        "desc": "We apply modern engineering practices and advanced technologies to deliver smarter, faster, and more efficient solutions."
+      },
+      "quality": {
+        "title": "Premium Quality",
+        "desc": "Every project is completed under strict quality standards to ensure long-lasting performance and customer confidence."
+      },
+      "global": {
+        "title": "Global Network",
+        "desc": "Our international partnerships and logistics capabilities enable seamless collaboration across global markets."
+      },
+      "support": {
+        "title": "Reliable Support",
+        "desc": "From planning to execution and beyond, our team provides responsive and professional support at every stage."
+      },
+      "highlight": {
+        "title": "Trusted Worldwide",
+        "description": "Building long-term partnerships through innovation, integrity, quality, and sustainable engineering solutions."
+      }
+    }
   },
+  
   "stats": {
     "title": "Our Impact In Numbers",
     "transformation": "Years of Transformation",
