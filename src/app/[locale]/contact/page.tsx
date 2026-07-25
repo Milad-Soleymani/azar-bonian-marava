@@ -298,14 +298,14 @@ const Contact = () => {
 
 
               {submitStatus === "success" && (
-                <div className="rounded-md bg-green-500/10 border border-green-500 p-3 text-green-400 text-right">
+                <div className="rounded-md bg-green-500/10 border border-green-500 p-3 text-green-400 text-center">
                   {t("messages.success")}
                 </div>
               )}
 
 
               {submitStatus === "error" && (
-                <div className="rounded-md bg-red-500/10 border border-red-500 p-3 text-red-400 text-right">
+                <div className="rounded-md bg-red-500/10 border border-red-500 p-3 text-red-400 text-center">
                   {t("messages.error")}
                 </div>
               )}
