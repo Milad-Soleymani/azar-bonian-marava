@@ -49,12 +49,22 @@ const Contact = () => {
     register,
     handleSubmit,
     setValue,
+    watch,
+    reset,
     formState: { errors },
   } = useForm<ContactFormData>({
     resolver: zodResolver(schema),
+    defaultValues: {
+      firstname: "",
+      lastname: "",
+      email: "",
+      phone: "",
+      service: "",
+      message: "",
+    },
   });
 
-
+  const service = watch("service");
   const onSubmit = async (data: ContactFormData) => {
     try {
       setLoading(true);
@@ -74,6 +84,7 @@ const Contact = () => {
 
       if (result.success) {
         setSubmitStatus("success");
+        reset();
       } else {
         setSubmitStatus("error");
       }
@@ -224,52 +235,30 @@ const Contact = () => {
               <div>
 
                 <Select
-                  onValueChange={(value) =>
-                    setValue("service", value, {
-                      shouldValidate: true,
-                      shouldDirty: true,
-                    })
-                  }
+                  value={service}
+                  onValueChange={(value) => setValue("service", value)}
                 >
-
                   <SelectTrigger className="w-full">
-
-                    <SelectValue
-                      placeholder={t("form.service")}
-                    />
-
+                    <SelectValue placeholder={t("form.service")} />
                   </SelectTrigger>
 
-
                   <SelectContent>
-
                     <SelectGroup>
-
-                      <SelectLabel>
-                        {t("form.service")}
-                      </SelectLabel>
-
+                      <SelectLabel>{t("form.service")}</SelectLabel>
 
                       <SelectItem value="construction">
                         {t("services.construction")}
                       </SelectItem>
 
-
                       <SelectItem value="import">
                         {t("services.import")}
                       </SelectItem>
 
-
                       <SelectItem value="export">
                         {t("services.export")}
                       </SelectItem>
-
-
                     </SelectGroup>
-
                   </SelectContent>
-
-
                 </Select>
 
 
