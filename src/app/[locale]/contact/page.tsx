@@ -35,6 +35,8 @@ import {
   type ContactFormData,
 } from "@/lib/validations/contact";
 
+import { useLocale } from "next-intl";
+
 const Contact = () => {
   const t = useTranslations("contact");
   const [submitStatus, setSubmitStatus] = useState<
@@ -42,6 +44,10 @@ const Contact = () => {
   >(null);
 
   const [loading, setLoading] = useState(false);
+
+  const locale = useLocale();
+
+  const isRTL = locale === "fa" || locale === "ar";
 
   const schema = contactSchema(t);
 
@@ -149,12 +155,17 @@ const Contact = () => {
             >
 
 
-              <h3 className="text-4xl text-accent">
+              <h3
+                className={`text-4xl text-accent ${isRTL ? "text-right" : "text-left"
+                  }`}
+              >
                 {t("title")}
               </h3>
 
-
-              <p className="text-white/60">
+              <p
+                className={`text-white/60 ${isRTL ? "text-right" : "text-left"
+                  }`}
+              >
                 {t("description")}
               </p>
 
@@ -166,6 +177,7 @@ const Contact = () => {
                 <div>
                   <Input
                     {...register("firstname")}
+                    dir={isRTL ? "rtl" : "ltr"}
                     type="text"
                     placeholder={t("form.firstname")}
                   />
@@ -182,6 +194,7 @@ const Contact = () => {
                 <div>
                   <Input
                     {...register("lastname")}
+                    dir={isRTL ? "rtl" : "ltr"}
                     type="text"
                     placeholder={t("form.lastname")}
                   />
@@ -198,6 +211,7 @@ const Contact = () => {
                 <div>
                   <Input
                     {...register("email")}
+                    dir={isRTL ? "rtl" : "ltr"}
                     type="email"
                     placeholder={t("form.email")}
                   />
@@ -214,6 +228,7 @@ const Contact = () => {
                 <div>
                   <Input
                     {...register("phone")}
+                    dir={isRTL ? "rtl" : "ltr"}
                     type="tel"
                     placeholder={t("form.phone")}
                   />
@@ -236,6 +251,7 @@ const Contact = () => {
 
                 <Select
                   value={service}
+
                   onValueChange={(value) => {
                     setValue("service", value ?? "", {
                       shouldValidate: true,
@@ -282,6 +298,7 @@ const Contact = () => {
 
                 <Textarea
                   {...register("message")}
+                  dir={isRTL ? "rtl" : "ltr"}
                   className="h-[200px]"
                   placeholder={t("form.message")}
                 />
