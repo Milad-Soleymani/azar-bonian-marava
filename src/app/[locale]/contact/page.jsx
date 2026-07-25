@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+
 import {
   Select,
   SelectContent,
@@ -14,27 +15,31 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { motion } from "framer-motion";
 
-const info = [
-  {
-    icon: <FaPhoneAlt />,
-    title: "Phone",
-    description: "(+98) 912 345 6789",
-  },
-  {
-    icon: <FaEnvelope />,
-    title: "E-mail",
-    description: "example@gmail.com",
-  },
-  {
-    icon: <FaMapMarkerAlt />,
-    title: "Address",
-    description: "Iran, Behbahani St.",
-  },
-];
+import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const Contact = () => {
+  const t = useTranslations("contact");
+
+  const info = [
+    {
+      icon: <FaPhoneAlt />,
+      title: t("info.phone.title"),
+      description: t("info.phone.description"),
+    },
+    {
+      icon: <FaEnvelope />,
+      title: t("info.email.title"),
+      description: t("info.email.description"),
+    },
+    {
+      icon: <FaMapMarkerAlt />,
+      title: t("info.address.title"),
+      description: t("info.address.description"),
+    },
+  ];
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -50,67 +55,163 @@ const Contact = () => {
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
-          {/* form */}
+
+          {/* Form */}
           <div className="xl:w-[54%] order-2 xl:order-0">
+
             <form
               className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
               action=""
             >
-              <h3 className="text-4xl text-accent">Let's Work Together</h3>
+
+              <h3 className="text-4xl text-accent">
+                {t("title")}
+              </h3>
+
               <p className="text-white/60">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Accusantium inventore porro quia molestias quasi.
+                {t("description")}
               </p>
-              {/* Input  */}
+
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
-                <Input type="email" placeholder="Email address" />
-                <Input type="phone" placeholder="Phone number" />
+
+                <Input
+                  name="firstname"
+                  type="text"
+                  placeholder={t("form.firstname")}
+                />
+
+                <Input
+                  name="lastname"
+                  type="text"
+                  placeholder={t("form.lastname")}
+                />
+
+                <Input
+                  name="email"
+                  type="email"
+                  placeholder={t("form.email")}
+                />
+
+                <Input
+                  name="phone"
+                  type="tel"
+                  placeholder={t("form.phone")}
+                />
+
               </div>
-              {/* select */}
-              <Select name="" id="">
+
+
+              <Select name="service">
+
                 <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service" />
+
+                  <SelectValue
+                    placeholder={t("form.service")}
+                  />
+
                 </SelectTrigger>
+
+
                 <SelectContent>
+
                   <SelectGroup>
-                    <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="construction">Construction</SelectItem>
-                    <SelectItem value="import">Import</SelectItem>
-                    <SelectItem value="export">Export</SelectItem>
+
+                    <SelectLabel>
+                      {t("form.service")}
+                    </SelectLabel>
+
+
+                    <SelectItem value="construction">
+                      {t("services.construction")}
+                    </SelectItem>
+
+
+                    <SelectItem value="import">
+                      {t("services.import")}
+                    </SelectItem>
+
+
+                    <SelectItem value="export">
+                      {t("services.export")}
+                    </SelectItem>
+
+
                   </SelectGroup>
+
                 </SelectContent>
+
+
               </Select>
-              {/* textarea */}
+
+
               <Textarea
+                name="message"
                 className="h-[200px]"
-                placeholder="Type your messages here"
+                placeholder={t("form.message")}
               />
-              {/* button */}
-              <Button size="md" className="max-w-40">
-                Send message
+
+
+              <Button
+                size="md"
+                className="max-w-40"
+              >
+                {t("form.submit")}
               </Button>
+
+
             </form>
+
           </div>
-          {/* info */}
-          <div className="flex-1 flex items-center xl:justify-center order-1 xl:order-0 mb-8 xl:mb-0 ">
+
+
+
+          {/* Info */}
+
+          <div className="flex-1 flex items-center xl:justify-center order-1 xl:order-0 mb-8 xl:mb-0">
+
             <ul className="flex flex-col gap-10">
-              {info.map((item, index) => {
-                return (
-                  <li key={index} className="flex items-center gap-6 ">
-                    <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-accent rounded-md flex items-center justify-center">
-                      <div className="text-[28px] ">{item.icon}</div>
+
+              {info.map((item, index) => (
+
+                <li
+                  key={index}
+                  className="flex items-center gap-6"
+                >
+
+                  <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-accent rounded-md flex items-center justify-center">
+
+                    <div className="text-[28px]">
+                      {item.icon}
                     </div>
-                    <div className="flex-1">
-                      <p className="text-white/60">{item.title}</p>
-                      <h3 className="text-xl">{item.description}</h3>
-                    </div>
-                  </li>
-                );
-              })}
+
+                  </div>
+
+
+                  <div className="flex-1">
+
+                    <p className="text-white/60">
+                      {item.title}
+                    </p>
+
+
+                    <h3 className="text-xl">
+                      {item.description}
+                    </h3>
+
+
+                  </div>
+
+
+                </li>
+
+              ))}
+
             </ul>
+
           </div>
+
+
         </div>
       </div>
     </motion.section>

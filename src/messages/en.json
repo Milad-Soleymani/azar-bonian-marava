@@ -41,7 +41,6 @@
       }
     }
   },
-  
   "stats": {
     "title": "Our Impact In Numbers",
     "transformation": "Years of Transformation",
@@ -162,5 +161,40 @@
     "quickLinks": "Quick Links",
     "follow": "Follow Us",
     "copyright": "© 2024–2026 Azar Bonyan Marava. All Rights Reserved."
+  },
+  "contact": {
+  "title": "Let's Work Together",
+  "description": "Contact us to start your next project. Our team is ready to answer your requests.",
+
+  "form": {
+    "firstname": "Firstname",
+    "lastname": "Lastname",
+    "email": "Email address",
+    "phone": "Phone number",
+    "service": "Select a service",
+    "message": "Type your message here",
+    "submit": "Send message"
+  },
+
+  "services": {
+    "construction": "Construction",
+    "import": "Import",
+    "export": "Export"
+  },
+
+  "info": {
+    "phone": {
+      "title": "Phone",
+      "description": "(+98) 912 345 6789"
+    },
+    "email": {
+      "title": "Email",
+      "description": "example@gmail.com"
+    },
+    "address": {
+      "title": "Address",
+      "description": "Iran, Behbahani St."
+    }
   }
+}
 }
