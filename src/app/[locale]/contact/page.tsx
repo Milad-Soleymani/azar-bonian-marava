@@ -28,6 +28,8 @@ import { useForm } from "react-hook-form";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 
+import { useState } from "react";
+
 import {
   contactSchema,
   type ContactFormData,
@@ -35,6 +37,11 @@ import {
 
 const Contact = () => {
   const t = useTranslations("contact");
+  const [submitStatus, setSubmitStatus] = useState<
+    "success" | "error" | null
+  >(null);
+
+  const [loading, setLoading] = useState(false);
 
   const schema = contactSchema(t);
 
@@ -48,8 +55,39 @@ const Contact = () => {
   });
 
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log(data);
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      setLoading(true);
+      setSubmitStatus(null);
+
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+
+      const result = await res.json();
+
+
+      if (result.success) {
+        setSubmitStatus("success");
+      } else {
+        setSubmitStatus("error");
+      }
+
+
+    } catch (error) {
+
+      setSubmitStatus("error");
+
+    } finally {
+
+      setLoading(false);
+
+    }
   };
 
   const info = [
@@ -266,14 +304,28 @@ const Contact = () => {
 
 
 
+              {submitStatus === "success" && (
+                <div className="rounded-md bg-green-500/10 border border-green-500 p-3 text-green-400 text-right">
+                  {t("messages.success")}
+                </div>
+              )}
 
+
+              {submitStatus === "error" && (
+                <div className="rounded-md bg-red-500/10 border border-red-500 p-3 text-red-400 text-right">
+                  {t("messages.error")}
+                </div>
+              )}
 
               <Button
                 type="submit"
                 size="md"
                 className="max-w-40"
+                disabled={loading}
               >
-                {t("form.submit")}
+                {loading
+                  ? t("messages.sending")
+                  : t("form.submit")}
               </Button>
 
 

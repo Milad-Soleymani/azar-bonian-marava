@@ -193,15 +193,18 @@
         "description": "Iran, Behbahani St."
       }
     },
-    
-      "validation": {
-        "firstname": "Firstname is required",
-        "lastname": "Lastname is required",
-        "email": "Enter a valid email address",
-        "phone": "Enter a valid phone number",
-        "service": "Please select a service",
-        "message": "Message cannot be empty"
-      }
-    
+    "validation": {
+      "firstname": "Firstname is required",
+      "lastname": "Lastname is required",
+      "email": "Enter a valid email address",
+      "phone": "Enter a valid phone number",
+      "service": "Please select a service",
+      "message": "Message cannot be empty"
+    },
+    "messages": {
+      "success": "Your message has been sent successfully. We will contact you soon.",
+      "error": "Message sending failed. Please try again.",
+      "sending": "Sending..."
+    }
   }
 }
