@@ -72,11 +72,11 @@ export default function Footer() {
 
         {/* Navigation */}
         <div>
-          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-white/40">
+          <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-center text-white/40">
             {t("quickLinks")}
           </p>
 
-          <ul className="space-y-2 ">
+          <ul className="space-y-2 text-center ">
             {links.map((link) => {
               const href = `/${locale}${link.path}`;
 
