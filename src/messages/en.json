@@ -206,5 +206,27 @@
       "error": "Message sending failed. Please try again.",
       "sending": "Sending..."
     }
+  },
+  
+  "services": {
+    "title": "Our Services",
+    "description": "Professional engineering, construction, project management and international trade services.",
+    "construction": {
+      "title": "Construction",
+      "description": "Delivering residential, commercial and industrial projects."
+    },
+    "projectManagement": {
+      "title": "Project Management",
+      "description": "Planning, supervising and managing projects from start to finish."
+    },
+    "internationalTrade": {
+      "title": "International Trade",
+      "description": "Providing reliable import and export solutions worldwide."
+    },
+    "engineeringConsulting": {
+      "title": "Engineering Consulting",
+      "description": "Engineering consulting and technical solutions for complex projects."
+    }
   }
+
 }
