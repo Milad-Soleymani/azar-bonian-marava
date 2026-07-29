@@ -7,6 +7,7 @@ import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 import WhyChoose from "@/components/home/WhyChoose";
+import Link from "next/link";
 
 type Props = {
   params: Promise<{
@@ -97,9 +98,9 @@ export default async function Home({ params }: Props) {
 
                 <BsInfoSquareFill />
 
-                <span>
+                <Link href={`/${locale}/about-us`}>
                   {t("button")}
-                </span>
+                </Link>
 
               </Button>
 
