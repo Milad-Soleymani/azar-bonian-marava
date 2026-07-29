@@ -38,7 +38,7 @@ export default function Breadcrumb({
       />
 
 
-      <nav className="text-sm text-white/60 mb-8">
+      <nav className="text-sm text-white/60 m-7 mb-8 mt-5">
 
         <ol className="flex gap-2">
 
