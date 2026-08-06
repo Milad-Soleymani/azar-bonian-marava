@@ -116,6 +116,13 @@ export const metadata: Metadata = {
       me: ['miladcoder0@gmail.com', 'azar-bonian-marava.vercel.app'],
     },
   },
+  alternates: {
+  languages: {
+    en: "/en",
+    fa: "/fa",
+    ar: "/ar",
+  },
+}
 };
 
 
