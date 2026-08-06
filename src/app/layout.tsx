@@ -149,6 +149,20 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-K7N7T2WP');
           `}
         </Script>
+        <Script
+  src="https://www.googletagmanager.com/gtag/js?id=G-K2LX2N4GK6"
+  strategy="afterInteractive"
+/>
+
+<Script id="google-analytics" strategy="afterInteractive">
+{`
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-K2LX2N4GK6');
+`}
+</Script>
       </head>
       <body
       className={`${inter.variable} ${vazirmatn.variable}`}>
