@@ -95,6 +95,14 @@ export const metadata: Metadata = {
       "/logo.png",
     ],
   },
+  verification:{
+   google: 'google',
+    yandex: 'yandex',
+    yahoo: 'yahoo',
+    other: {
+      me: ['miladcoder0@gmail.com', 'azar-bonian-marava.vercel.app'],
+    },
+  },
 };
 
 
@@ -109,6 +117,11 @@ export default function RootLayout({
       suppressHydrationWarning
       className={jetbrainsMono.variable}
     >
+    <meta name="google-site-verification" content="google" />
+<meta name="y_key" content="yahoo" />
+<meta name="yandex-verification" content="yandex" />
+<meta name="me" content="miladcoder0@gmail.com" />
+<meta name="me" content="azar-bonian-marava.vercel.app" />
 
       <body>
         {children}
