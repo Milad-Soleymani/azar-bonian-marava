@@ -54,6 +54,16 @@
   --container-center: true;
 }
 
+
+html[lang="fa"],
+html[lang="ar"] {
+  font-family: var(--font-fa);
+}
+
+html[lang="en"] {
+  font-family: var(--font-en);
+}
+
 :root {
   /* Colors */
   --background: #0a0a0a;
@@ -95,6 +105,8 @@
   --sidebar-accent-foreground: #fff;
   --sidebar-border: rgba(255,255,255,.08);
   --sidebar-ring: #00ff99;
+    --font-en: "Inter", sans-serif;
+  --font-fa: "Vazirmatn", sans-serif;
 }
 
 .dark {
@@ -123,10 +135,10 @@
   }
 
   body {
-    background: #0a0a0a;
-    color: white;
-    font-family: var(--font-jetbrainsMono);
-    line-height: 2;
+      background: #0a0a0a;
+  color: white;
+  line-height: 2;
+}
   }
 
   html {
@@ -144,7 +156,7 @@
   .h3 {
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-semibold;
   }
-}
+
 
 @utility text-outline {
   -webkit-text-stroke: 1px #fff;

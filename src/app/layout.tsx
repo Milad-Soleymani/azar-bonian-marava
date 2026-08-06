@@ -1,7 +1,19 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
+import { Inter, Vazirmatn } from "next/font/google";
 
+export const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-en",
+  display: "swap",
+});
+
+export const vazirmatn = Vazirmatn({
+  subsets: ["arabic"],
+  variable: "--font-fa",
+  display: "swap",
+});
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrainsMono",
@@ -113,17 +125,15 @@ export default function RootLayout({
 }) {
 
   return (
-    <html
-      suppressHydrationWarning
-      className={jetbrainsMono.variable}
-    >
+   <html>
     <meta name="google-site-verification" content="qUW9d1djKLfxa5JvCDMEpkcyzcKjQo09k6x2Usupxfs"/>
 <meta name="y_key" content="yahoo" />
 <meta name="yandex-verification" content="yandex" />
 <meta name="me" content="miladcoder0@gmail.com" />
 <meta name="me" content="azar-bonian-marava.vercel.app" />
 
-      <body>
+      <body
+      className={`${inter.variable} ${vazirmatn.variable}`}>
         {children}
       </body>
 

@@ -227,11 +227,12 @@ export default async function LocaleLayout({
 
 
 
-
-  return (
-
+return (
+  <div
+    lang={locale}
+    dir={locale === "fa" || locale === "ar" ? "rtl" : "ltr"}
+  >
     <NextIntlClientProvider messages={messages}>
-
 
       <JsonLd />
 
@@ -263,6 +264,7 @@ export default async function LocaleLayout({
 
 
     </NextIntlClientProvider>
+    </div>
 
   );
 
