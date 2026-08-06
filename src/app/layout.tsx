@@ -117,7 +117,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={jetbrainsMono.variable}
     >
-    <meta name="google-site-verification" content="google" />
+    <meta name="google-site-verification" content="qUW9d1djKLfxa5JvCDMEpkcyzcKjQo09k6x2Usupxfs"/>
 <meta name="y_key" content="yahoo" />
 <meta name="yandex-verification" content="yandex" />
 <meta name="me" content="miladcoder0@gmail.com" />
